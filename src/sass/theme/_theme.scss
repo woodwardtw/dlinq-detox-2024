@@ -1,0 +1,189 @@
+// This is an empty scss file for your custom styles - Please add your super duper awesome mega design styles here
+
+h1, h2, h3, h4 {
+  font-family: 'Oswald', sans-serif;
+}
+
+.home-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: 200px 450px 600px 450px 200px;
+  grid-auto-flow: row;
+  justify-items: stretch;
+  align-items: stretch;
+  background-color: $white;
+}
+
+.main-title {
+  width: 100%;
+  background-color: $red;
+  color: $white;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+}
+
+.sub-title {
+    text-align: right;
+    font-size: 1rem;
+    margin-right: 60px;
+    width: 100%;
+    font-size: 1.3rem;
+    font-weight: 200;
+}
+
+.left-long{
+  grid-column: 1;
+  grid-row: 2 / span 2;
+  padding-top: 5px;
+  padding-right: 5px;
+  padding-bottom: 5px;
+}
+
+.top-right{
+  grid-column: 2 / span 2;
+  background-color: $white;
+}
+
+.center {
+  grid-row: 3;
+}
+
+.bottom-left {
+  grid-row: 4;
+  grid-column: 1 / span 2;
+}
+
+.right-long {
+  grid-row: 3 / span 2;
+  grid-column: 3;
+  background-color: $aqua;
+}
+
+.footer {
+  grid-row: 5;
+  grid-column: 1 / span 3;
+}
+
+#mag-title a{
+  font-size:calc(100% + 6vw);
+  line-height: 1;
+  margin: 0;
+  color: $white;
+  text-decoration: none;
+  font-family: 'Oswald', sans-serif;
+}
+
+.left-long h2, .center h2 {
+  font-size:calc(100% + 2vw);
+  line-height: 1;
+  margin: 0;
+}
+
+p {
+  font-size: calc(100% + .4vw)
+}
+
+
+.internal-left-block {
+  padding: 80px 40px;
+  height: 100%;
+  overflow: hidden;
+}
+
+.yellow {
+    background-color: $yellow;
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto
+}
+
+.internal-top-block {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 30px;
+  padding: 20px;
+}
+
+.internal-top-block img {
+  width: 30%;
+}
+
+.internal-top-block div {
+  width: 65%;
+}
+
+.internal-top-block h2 {
+  font-size:calc(100% + 2vw);
+  line-height: 1;
+  margin: 20px 0;
+}
+
+.test {
+  border: 1px solid green;
+  max-width: 100%;
+  height: 100%;
+}
+
+.btn {
+  font-size: 2rem;
+  font-weight: 700;
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
+  color: $black;
+  padding: 5px 20px;
+  box-shadow: 5px 5px;
+  transition: all 0.5s ease-out;
+  cursor: pointer;
+}
+
+.btn-more {
+  background-color: $yellow;
+}
+
+.btn-more:hover {
+    box-shadow: -5px 5px $red;
+}
+
+.btn-signup {
+  background-color: $aqua;
+}
+
+.btn-signup:hover {
+    box-shadow: -5px 5px $red;
+}
+
+.center-block {
+  display: flex;
+  flex-wrap: no-wrap;
+  gap: 0 30px;
+  padding: 30px;
+}
+
+.center-block img {
+  width: 50%
+}
+.conter-block div {
+  width: 40%;
+}
+
+
+@media only screen and (max-width: 600px) {
+    
+
+}
+
+.hide {
+  display: none;
+}
+
+
+/* override styles when printing */
+@media print {
+
+   
+}
