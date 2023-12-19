@@ -44,20 +44,44 @@ h1, h2, h3, h4 {
   font-family: 'Oswald', sans-serif;
 }
 
-.left-long h2, .center h2 {
-  font-size:calc(100% + 2vw);
-  line-height: 1;
-  margin: 0;
+.home-box {
+  padding: 30px;
 }
 
-p {
-  font-size: calc(100% + .4vw)
+.home-box h2 {
+  font-size:calc(100% + 2vw);
+  line-height: 1;
+  margin: 0 0 15px 0;
+}
+
+#home p {
+  font-size: calc(100% + .4vw);
+  line-height: 1.4;
+}
+
+#home .container-fluid {
+  height: 100%;
 }
 
 .yellow {
     background-color: $yellow;
+    height: 100%;
 }
 
+.aqua {
+    background-color: $aqua;
+        height: 100%;
+}
+
+.red {
+    background-color: $red;
+        height: 100%;
+}
+
+.white {
+    background-color: $white;
+        height: 100%;
+}
 
 .internal-top-block h2 {
   font-size:calc(100% + 2vw);
@@ -71,10 +95,13 @@ p {
   font-family: 'Oswald', sans-serif;
   text-transform: uppercase;
   color: $black;
-  padding: 5px 20px;
+  padding: 5px 30px;
   box-shadow: 5px 5px;
   transition: all 0.5s ease-out;
   cursor: pointer;
+  margin: 10px auto;
+  display: block;
+  max-width: 200px;
 }
 
 .btn-more {

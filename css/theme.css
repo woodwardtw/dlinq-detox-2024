@@ -15401,18 +15401,43 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
   font-family: "Oswald", sans-serif;
 }
 
-.left-long h2, .left-long .h2, .center h2, .center .h2 {
-  font-size: calc(100% + 2vw);
-  line-height: 1;
-  margin: 0;
+.home-box {
+  padding: 30px;
 }
 
-p {
+.home-box h2, .home-box .h2 {
+  font-size: calc(100% + 2vw);
+  line-height: 1;
+  margin: 0 0 15px 0;
+}
+
+#home p {
   font-size: calc(100% + 0.4vw);
+  line-height: 1.4;
+}
+
+#home .container-fluid, #home .container-sm, #home .container-md, #home .container-lg, #home .container-xl, #home .container-xxl {
+  height: 100%;
 }
 
 .yellow {
   background-color: rgb(247, 220, 10);
+  height: 100%;
+}
+
+.aqua {
+  background-color: rgb(4, 176, 188);
+  height: 100%;
+}
+
+.red {
+  background-color: rgb(214, 9, 5);
+  height: 100%;
+}
+
+.white {
+  background-color: #fff;
+  height: 100%;
 }
 
 .internal-top-block h2, .internal-top-block .h2 {
@@ -15427,10 +15452,13 @@ p {
   font-family: "Oswald", sans-serif;
   text-transform: uppercase;
   color: #000;
-  padding: 5px 20px;
+  padding: 5px 30px;
   box-shadow: 5px 5px;
   transition: all 0.5s ease-out;
   cursor: pointer;
+  margin: 10px auto;
+  display: block;
+  max-width: 200px;
 }
 
 .btn-more {
