@@ -54,47 +54,15 @@ p {
   font-size: calc(100% + .4vw)
 }
 
-
-.internal-left-block {
-  padding: 80px 40px;
-  height: 100%;
-  overflow: hidden;
-}
-
 .yellow {
     background-color: $yellow;
 }
 
-.img-fluid {
-  max-width: 100%;
-  height: auto
-}
-
-.internal-top-block {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0 30px;
-  padding: 20px;
-}
-
-.internal-top-block img {
-  width: 30%;
-}
-
-.internal-top-block div {
-  width: 65%;
-}
 
 .internal-top-block h2 {
   font-size:calc(100% + 2vw);
   line-height: 1;
   margin: 20px 0;
-}
-
-.test {
-  border: 1px solid green;
-  max-width: 100%;
-  height: 100%;
 }
 
 .btn {
@@ -114,6 +82,7 @@ p {
 }
 
 .btn-more:hover {
+    background-color: $yellow;
     box-shadow: -5px 5px $red;
 }
 
@@ -122,6 +91,7 @@ p {
 }
 
 .btn-signup:hover {
+    background-color: $aqua;
     box-shadow: -5px 5px $red;
 }
 
