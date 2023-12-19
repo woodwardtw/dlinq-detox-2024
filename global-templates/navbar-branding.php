@@ -11,7 +11,7 @@ defined( 'ABSPATH' ) || exit;
 
 if ( ! has_custom_logo() ) { ?>
  <div class="main-title">
-    <h1 id="mag-title"><a href="#">DEMYSTIFYING AI</a></h1>
+    <h1 id="mag-title"><a href="<?php echo get_home_url(); ?>">DEMYSTIFYING AI</a></h1>
     <div class="sub-title">Digital Detox: 2024</div>
 </div>
 

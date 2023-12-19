@@ -60,19 +60,23 @@ function detox_homepage_posts(){
 			$title = get_the_title();
 			$link = get_the_permalink();
 			$img = get_the_post_thumbnail($post->ID,'medium', array('class' => 'img-fluid'));
-			$bg_colors = array('white', 'white', 'aqua', 'white', 'red', 'white');
-			$bg_color = $bg_colors[$the_query->current_post];
-			$class = ($the_query->current_post % 2 == 0) ? 'col-md-7' : 'col-md-5' ;
-			$img_side = ($the_query->current_post % 3 == 0) ? 'order-md-last' : 'order-md-first';
+			$content = get_the_content();
+			$excerpt = substr($content, 0, 350) . ' . . .';
+			$bg_colors = array('white', 'white', 'aqua', 'red', 'white', 'white');
+			$bg_color = $bg_colors[$the_query->current_post]; //change background color according to array
+			$make_seven = array(0, 1, 4, 5, 7 );
+			$post_number = $the_query->current_post;
+			$class = (in_array( $post_number, $make_seven )) ? 'col-md-7' : 'col-md-5' ; // alternate 5 and 7 column width blocks
+			$img_side = ($the_query->current_post % 3 == 0) ? 'order-md-last' : 'order-md-first'; //alter img to go first or last 
 			$html = "<div class='{$class}'>
 					<div class='container-fluid'>
 						<div class='row {$bg_color}'>
-							<div class='col-md-4 {$img_side} home-box'>
+							<div class='col-md-5 {$img_side} home-box'>
 								{$img}
 							</div>
-							<div class='col-md-8 home-box'>
+							<div class='col-md-7 home-box'>
 								<h2>{$title}</h2>
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lorem dui, tempor ac est vel, iaculis lacinia ipsum. Suspendisse magna lectus, cursus eget metus sit amet, sollicitudin porta purus. Donec eleifend magna mi, a sagittis ex sodales a. Nam convallis orci sapien, ac pretium ex pretium in. Pellentesque ullamcorper dapibus felis. Donec aliquet nibh sed dolor tincidunt fringilla. Etiam sit amet consectetur purus. Sed semper, dolor eu semper ornare, urna justo euismod velit, e</p>
+								<p>{$excerpt}</p>
 								<a class='btn btn-more' href='{$link}' aria-lable='Read more about the AI topic: {$title}.'>Explore</a>
 							</div>
 						

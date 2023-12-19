@@ -15418,6 +15418,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
 
 #home .container-fluid, #home .container-sm, #home .container-md, #home .container-lg, #home .container-xl, #home .container-xxl {
   height: 100%;
+  padding: 20px 0;
 }
 
 .yellow {
