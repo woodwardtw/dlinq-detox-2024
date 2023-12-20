@@ -18,17 +18,12 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 		<div class="row">
 
-			<?php
-			// Do the left sidebar check and open div#primary.
-			get_template_part( 'global-templates/left-sidebar-check' );
-			?>
-
 			<main class="site-main" id="main">
 
 				<?php
 				while ( have_posts() ) {
 					the_post();
-					get_template_part( 'loop-templates/content', 'single' );
+					get_template_part( 'loop-templates/content', 'flex' );
 					understrap_post_nav();
 
 					// If comments are open or we have at least one comment, load up the comment template.
@@ -40,10 +35,6 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 			</main>
 
-			<?php
-			// Do the right sidebar check and close div#primary.
-			get_template_part( 'global-templates/right-sidebar-check' );
-			?>
 
 		</div><!-- .row -->
 
