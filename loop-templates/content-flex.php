@@ -184,7 +184,7 @@
                     <?php endif;?>
                     <?php if ($form > 0) {
                         gravity_form($form);//show form
-                        //dlinq_gf_form_entry_display($form);//show form entries
+                        detox_display_submissions($post->ID);
                         }?>
                 </div>
             </div>

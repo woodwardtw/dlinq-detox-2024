@@ -116,3 +116,24 @@ function acf_populate_gf_forms_ids( $field ) {
 	return $field;
 }
 add_filter( 'acf/load_field/name=form_id', 'acf_populate_gf_forms_ids' );
+
+
+function detox_display_submissions($page_id){
+	$cat = 'page-'.$page_id;
+	$args = array(
+		'post_type' 	=> array('post'),
+		'post_status'	=> array('publish'),
+		 'category_name' => $cat
+	);
+	$the_query = new WP_Query( $args );
+
+	// The Loop
+	if ( $the_query->have_posts() ) :
+		while ( $the_query->have_posts() ) : $the_query->the_post();
+		the_title();
+		endwhile;
+	endif;
+
+	// Reset Post Data
+	wp_reset_postdata();
+}
