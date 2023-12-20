@@ -170,6 +170,25 @@
             echo "</div>";
         ?>
         <?php endif;?>
+
+        <!--challenge loop-->
+         <?php if( get_row_layout() == 'challenge' ): 
+            $title = get_sub_field('challenge_title');
+            $form = get_sub_field('form_id');
+            $slug = sanitize_title($title);
+        ?>
+            <div class='row topic-row full-width-row'>
+				<div class='col-md-8 offset-md-2'>
+                    <?php if($title):?>
+                        <h2 id="<?php echo $slug;?>"><?php echo $title;?></h2>
+                    <?php endif;?>
+                    <?php if ($form > 0) {
+                        gravity_form($form);//show form
+                        //dlinq_gf_form_entry_display($form);//show form entries
+                        }?>
+                </div>
+            </div>
+        <?php endif;?>
       
     <?php endwhile; ?>
 <?php endif; ?>

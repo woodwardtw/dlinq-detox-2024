@@ -482,6 +482,59 @@
                     ],
                     "min": "",
                     "max": ""
+                },
+                "layout_65834667e0b5f": {
+                    "key": "layout_65834667e0b5f",
+                    "name": "challenge",
+                    "label": "Challenge",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_65834671e0b61",
+                            "label": "Challenge TItle",
+                            "name": "challenge_title",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_65834679e0b62",
+                            "label": "Form ID",
+                            "name": "form_id",
+                            "aria-label": "",
+                            "type": "select",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": [],
+                            "default_value": false,
+                            "return_format": "value",
+                            "multiple": 0,
+                            "allow_null": 0,
+                            "ui": 0,
+                            "ajax": 0,
+                            "placeholder": ""
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
                 }
             },
             "min": "",
@@ -514,5 +567,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1703091331
+    "modified": 1703102090
 }

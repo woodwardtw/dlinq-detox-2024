@@ -12,9 +12,9 @@ defined( 'ABSPATH' ) || exit;
 <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
     <div class="row topic-row white d-flex align-items-center">
         <div class="col-md-5">
-            <?php echo get_the_post_thumbnail( $post->ID, 'large' ); ?>
+            <?php echo get_the_post_thumbnail( $post->ID, 'large',  array('class' => 'img-fluid active-img') ); ?>
         </div>
-        <div class="col-md-7">
+        <div class="col-md-5">
 	        <header class="entry-header">
 
 		        <?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>

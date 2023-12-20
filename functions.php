@@ -47,9 +47,12 @@ foreach ( $understrap_includes as $file ) {
 
 function detox_homepage_posts(){
 	$args = array(
-		'post_type' => array('post'),
-		'post_status' => array('publish')
-
+		'post_type' 	=> array('activity'),
+		'post_status'	=> array('publish'),
+		  'orderby' 	=> array(
+			'date' =>'ASC',
+			/*Other params*/
+			)
 	);
 	$the_query = new WP_Query( $args );
 
@@ -61,7 +64,7 @@ function detox_homepage_posts(){
 			$link = get_the_permalink();
 			$img = get_the_post_thumbnail($post->ID,'medium', array('class' => 'img-fluid'));
 			$content = get_the_content();
-			$excerpt = substr($content, 0, 350) . ' . . .';
+			$excerpt = substr($content, 0, 400) . ' . . .';
 			$bg_colors = array('white', 'white', 'aqua', 'red', 'white', 'white');
 			$bg_color = $bg_colors[$the_query->current_post]; //change background color according to array
 			$make_seven = array(0, 1, 4, 5, 7 );
@@ -69,19 +72,17 @@ function detox_homepage_posts(){
 			$class = (in_array( $post_number, $make_seven )) ? 'col-md-7' : 'col-md-5' ; // alternate 5 and 7 column width blocks
 			$img_side = ($the_query->current_post % 3 == 0) ? 'order-md-last' : 'order-md-first'; //alter img to go first or last 
 			$html = "<div class='{$class}'>
-					<div class='container-fluid'>
-						<div class='row {$bg_color}'>
-							<div class='col-md-5 {$img_side} home-box'>
+						<div class='row {$bg_color} home-box'>
+							<div class='col-md-5 {$img_side}'>
 								{$img}
 							</div>
-							<div class='col-md-7 home-box'>
+							<div class='col-md-7'>
 								<h2>{$title}</h2>
 								<p>{$excerpt}</p>
 								<a class='btn btn-more' href='{$link}' aria-lable='Read more about the AI topic: {$title}.'>Explore</a>
 							</div>
 						
 						</div>
-					</div>
 				</div>";
 		// Do Stuff
 		echo $html;
@@ -91,3 +92,27 @@ function detox_homepage_posts(){
 	// Reset Post Data
 	wp_reset_postdata();
 }
+
+
+//CHALLENGES
+//NEEDS TO BE IN MAIN FUNCTIONS FOR SOME REASON
+//add gravity forms to acf field for the daily create challenge option
+/**
+ * Populate ACF select field options with Gravity Forms forms
+ */
+
+//might need something like https://wordpress.org/plugins/categories-for-gravity-forms/
+function acf_populate_gf_forms_ids( $field ) {
+	if ( class_exists( 'GFFormsModel' ) ) {
+		$choices = [''];
+
+		foreach ( \GFFormsModel::get_forms() as $form ) {
+			$choices[ $form->id ] = $form->title;
+		}
+
+		$field['choices'] = $choices;
+	}
+
+	return $field;
+}
+add_filter( 'acf/load_field/name=form_id', 'acf_populate_gf_forms_ids' );
