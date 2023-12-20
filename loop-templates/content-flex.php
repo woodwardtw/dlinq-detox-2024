@@ -46,7 +46,7 @@
             $slug = sanitize_title($title);
         ?>
             <div class='row topic-row full-width-row <?php echo $color;?> d-flex align-items-center'>
-				<div class='col-md-6 offset-md-3'>
+				<div class='col-md-8 offset-md-2'>
                     <?php if($title):?>
                         <h2 id="<?php echo $slug?>"><?php echo $title;?></h2>
                     <?php endif;?>
@@ -54,7 +54,37 @@
                 </div>
             </div>
         <?php endif;?>
-       
+           <!--activity steps loop-->
+         <?php if( get_row_layout() == 'steps' ): 
+            $title = get_sub_field('activity_title');
+            $steps = get_sub_field('activity_steps');
+            $slug = sanitize_title($title);
+        ?>
+            <div class='row topic-row full-width-row <?php echo $color;?> d-flex align-items-center'>
+				<div class='col-md-8 offset-md-2'>
+                    <?php if($title):?>
+                        <h2 id="<?php echo $slug?>"><?php echo $title;?></h2>
+                    <?php endif;?>
+                    <?php 
+                        if($steps){
+                            foreach ($steps as $key => $step) {
+                                $title = $step['title'];
+                                $content = $step['content'];
+                                $count = $key+1;
+                                echo "
+                                <div class='step'>
+                                    <h3>Step {$count}: {$title}</h3>
+                                    <div class='activity-content'>
+                                        {$content}
+                                    </div>
+                                </div>
+                                ";
+                            }
+                        }
+                    ?>
+                </div>
+            </div>
+        <?php endif;?>
         <!--Big Quote loop-->
          <?php if( get_row_layout() == 'big_quote' ): 
             $content = get_sub_field('quote');
