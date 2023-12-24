@@ -130,7 +130,11 @@ function detox_display_submissions($page_id){
 	// The Loop
 	if ( $the_query->have_posts() ) :
 		while ( $the_query->have_posts() ) : $the_query->the_post();
-		the_title();
+		$title = get_the_title();
+		$link = get_the_permalink();
+		echo "<div class='entry'>
+				<a href='{$link}'><h3>{$title}</h3></a>
+			</div>";
 		endwhile;
 	endif;
 
