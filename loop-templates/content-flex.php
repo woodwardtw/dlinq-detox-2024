@@ -183,7 +183,21 @@
                         <h2 id="<?php echo $slug;?>"><?php echo $title;?></h2>
                     <?php endif;?>
                     <?php if ($form > 0) {
-                        gravity_form($form);//show form
+                        $form_display = gravity_form($form, false, false, false, null, false, null, false, null, null);
+                        echo "<div class='accordion' id='accordionExample'>
+                                <div class='accordion-item'>
+                                    <h2 class='accordion-header' id='headingOne'>
+                                    <button class='accordion-button collapsed' type='button' data-bs-toggle='collapse' data-bs-target='#collapseOne' aria-expanded='false' aria-controls='collapseOne'>
+                                        Submit your activity
+                                    </button>
+                                    </h2>
+                                    <div id='collapseOne' class='accordion-collapse collapse' aria-labelledby='headingOne' data-bs-parent='#accordionExample'>
+                                    <div class='accordion-body'>
+                                    {$form_display}
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>";
                         detox_display_submissions($post->ID);
                         }?>
                 </div>
@@ -192,3 +206,4 @@
       
     <?php endwhile; ?>
 <?php endif; ?>
+
