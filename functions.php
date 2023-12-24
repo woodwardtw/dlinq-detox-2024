@@ -129,13 +129,18 @@ function detox_display_submissions($page_id){
 
 	// The Loop
 	if ( $the_query->have_posts() ) :
+		echo "<div class='submission-holder'><h2>Submissions</h2><div class='row'>";
 		while ( $the_query->have_posts() ) : $the_query->the_post();
+		global $post;
 		$title = get_the_title();
 		$link = get_the_permalink();
-		echo "<div class='entry'>
+		$img = get_the_post_thumbnail($post->ID, 'medium');
+		echo "<div class='entry col-md-4'>
+				{$img}
 				<a href='{$link}'><h3>{$title}</h3></a>
 			</div>";
 		endwhile;
+		echo "</div></div>";
 	endif;
 
 	// Reset Post Data
