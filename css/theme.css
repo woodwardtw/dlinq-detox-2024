@@ -15549,13 +15549,17 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
   left: 0;
   width: 100%;
   text-align: center;
-  background-color: rgb(214, 9, 5);
-  color: #fff;
+  background-color: #fff;
+  color: #000;
+  border-top: 1px solid #000;
 }
 
 #wrapper-footer a {
-  background-color: #fff;
-  padding: 2px 10px;
+  transition: all 0.3s ease;
+}
+
+#wrapper-footer a:hover {
+  background-color: rgb(247, 220, 10);
 }
 
 .hide {
