@@ -55,7 +55,7 @@ h1, h2, h3, h4 {
   margin: 0 0 15px 0;
 }
 
-#home p {
+#home p, #home li, .entry-content p, .entry-content li {
   font-size: calc(100% + .4vw);
   line-height: 1.4;
 }
@@ -188,8 +188,7 @@ h1, h2, h3, h4 {
 #single-wrapper .featured {
   margin: 20px auto;
   display: block;
-  padding: 10px;
-  border: 1px solid $black;
+  border: 10px solid $black;
 }
 
 #single-wrapper .entry-content {
