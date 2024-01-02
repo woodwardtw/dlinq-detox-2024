@@ -185,6 +185,21 @@ h1, h2, h3, h4 {
   background-color: #efefef;
 }
 
+#single-wrapper .featured {
+  margin: 20px auto;
+  display: block;
+  padding: 10px;
+  border: 1px solid $black;
+}
+
+#single-wrapper .entry-content {
+  margin-top: 50px;
+}
+
+#comments {
+  margin:50px 0 200px 0;
+}
+
 #wrapper-footer {
   position: fixed;
   bottom: 0;
@@ -194,6 +209,16 @@ h1, h2, h3, h4 {
   background-color: $white;
   color: $black;
   border-top: 1px solid $black;
+}
+
+#submit {
+  font-size: 1.3rem;
+  background-color: $yellow;
+}
+
+#submit:hover {
+  box-shadow: -5px 5px $red;
+  color: $black;
 }
 
 #wrapper-footer a {

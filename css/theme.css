@@ -15543,6 +15543,21 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
   background-color: #efefef;
 }
 
+#single-wrapper .featured {
+  margin: 20px auto;
+  display: block;
+  padding: 10px;
+  border: 1px solid #000;
+}
+
+#single-wrapper .entry-content {
+  margin-top: 50px;
+}
+
+#comments {
+  margin: 50px 0 200px 0;
+}
+
 #wrapper-footer {
   position: fixed;
   bottom: 0;
@@ -15552,6 +15567,16 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
   background-color: #fff;
   color: #000;
   border-top: 1px solid #000;
+}
+
+#submit {
+  font-size: 1.3rem;
+  background-color: rgb(247, 220, 10);
+}
+
+#submit:hover {
+  box-shadow: -5px 5px rgb(214, 9, 5);
+  color: #000;
 }
 
 #wrapper-footer a {
