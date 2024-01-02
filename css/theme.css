@@ -15522,8 +15522,14 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
   margin: 0 0 15px 0;
 }
 
-#activity-content h2, #activity-content .h2, .topic-row h2, .topic-row .h2 {
+#activity-content h2, #activity-content .h2 {
   font-size: calc(100% + 2.5vw);
+  line-height: 1;
+  margin: 0 0 15px 0;
+}
+
+.topic-row h2, .topic-row .h2 {
+  font-size: calc(100% + 1.5vw);
   line-height: 1;
   margin: 0 0 15px 0;
 }
