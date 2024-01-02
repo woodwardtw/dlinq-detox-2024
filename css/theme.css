@@ -15643,6 +15643,16 @@ img.black {
   background-color: #000;
 }
 
+.sub-img {
+  width: 100%;
+}
+
+.entry-inner {
+  padding: 10px;
+  margin: 10px;
+  border: 1px solid #000;
+}
+
 .hide {
   display: none;
 }

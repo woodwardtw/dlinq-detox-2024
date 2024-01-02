@@ -289,6 +289,15 @@ img.black{
       background-color: $black;
 }
 
+.sub-img {
+  width: 100%;;
+}
+
+.entry-inner {
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid $black;
+}
 
 
 @media only screen and (max-width: 600px) {

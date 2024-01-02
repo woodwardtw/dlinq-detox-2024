@@ -129,7 +129,7 @@ function detox_display_submissions($page_id){
 
 	// The Loop
 	if ( $the_query->have_posts() ) :
-		echo "<div class='submission-holder'><h2>Submissions</h2><div class='row'>";
+		echo "<div class='submission-holder'><h2 id='submissions'>Submissions</h2><div class='row'>";
 		while ( $the_query->have_posts() ) : $the_query->the_post();
 			global $post;
 			$title = get_the_title();
@@ -137,16 +137,20 @@ function detox_display_submissions($page_id){
 			$comment_count = get_comment_count($post->ID)['approved'];
 			$plural = ($comment_count === 1) ? '' : 's';
 			if(has_post_thumbnail($post->ID)){
-						$img = get_the_post_thumbnail($post->ID, 'medium');
+						$img = get_the_post_thumbnail($post->ID, 'medium', array('class'=>'img-fluid sub-img'));
 			} else {
 				$dir = get_template_directory_uri();
 				$color = detox_rand_color();
-				$img = "<img src='{$dir}/imgs/ai-wave-white.svg' class='attachment-medium size-medium wp-post-image {$color}' width='300' height='300' alt='AI written with a half-tone background.'>";
+				$img = "<img src='{$dir}/imgs/ai-wave-white.svg' class='attachment-medium size-medium wp-post-image {$color}' width='100%' height='auto' alt='AI written with a half-tone background.'>";
 			}
 		echo "<div class='entry col-md-4'>
-				{$img}
-				<a href='{$link}'><h3>{$title}</h3></a>
-				<div class='comments'>{$comment_count} comment{$plural}</div>
+				<div class='entry-inner'>
+					<a href='{$link}'>
+						{$img}
+						<h3>{$title}</h3>
+					</a>
+					<div class='comments'>{$comment_count} comment{$plural}</div>
+				</div>
 			</div>";
 		endwhile;
 		echo "</div></div>";
