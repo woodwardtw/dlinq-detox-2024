@@ -26,8 +26,8 @@ $container = get_theme_mod( 'understrap_container_type' );
 				<footer class="site-footer" id="colophon">
 
 					<div class="site-info">
-
-						<?php understrap_site_info(); ?>
+						A <a href="https://dlinq.middcreate.net">Digital Learning and Inquiry</a> experience brought to you by <a href="https://middlebury.edu">Middlebury College</a>
+						<?php //understrap_site_info(); ?>
 
 					</div><!-- .site-info -->
 
