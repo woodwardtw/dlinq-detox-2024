@@ -15649,18 +15649,46 @@ img.black {
 
 .entry-inner {
   padding: 10px;
-  margin: 10px;
-  border: 1px solid #000;
+  margin: 10px 0;
+  border: 10px solid #000;
   transition: all 0.3s ease;
   height: 100%;
 }
 
 .entry-inner:hover {
   box-shadow: 5px 5px rgb(4, 176, 188);
+  transform: scale(1.02);
 }
 
 .entry-inner a {
   color: #000;
+}
+
+/*COMMENTS*/
+.comment-list a {
+  color: #000;
+  text-decoration: none;
+}
+
+.comment-list li {
+  padding: 10px;
+  border-top: 1px solid rgb(4, 176, 188);
+  margin: 10px 0;
+}
+
+.comment-list li li {
+  border-bottom: 1px solid rgb(4, 176, 188);
+}
+
+.comment-metadata a {
+  color: #424242;
+  font-size: 0.8rem;
+}
+
+.comment-reply-link {
+  background-color: rgb(247, 220, 10);
+  padding: 3px 6px;
+  border-radius: 2px;
 }
 
 .hide {

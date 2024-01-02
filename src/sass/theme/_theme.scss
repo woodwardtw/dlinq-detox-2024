@@ -295,23 +295,48 @@ img.black{
 
 .entry-inner {
     padding: 10px;
-    margin: 10px;
-    border: 1px solid $black;
+    margin: 10px 0;
+    border: 10px solid $black;
     transition: all .3s ease;
     height: 100%;
 }
 
 .entry-inner:hover {
   box-shadow: 5px 5px $aqua;
+  transform: scale(1.02);
 }
 
 .entry-inner a{
   color: $black;
 }
 
+/*COMMENTS*/
 
+.comment-list a{
+  color: $black;
+  text-decoration: none;
+}
 
+.comment-list li{
+  padding: 10px;
+  border-top: 1px solid $aqua;
+  margin: 10px 0;
+}
 
+.comment-list li li {
+  border-bottom: 1px solid $aqua;
+}
+
+.comment-metadata a{
+  color: #424242;
+  font-size: .8rem;
+}
+
+.comment-reply-link {
+  background-color: $yellow;
+  padding: 3px 6px;
+  border-radius: 2px;
+}
 
 @media only screen and (max-width: 600px) {
     
