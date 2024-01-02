@@ -15651,6 +15651,16 @@ img.black {
   padding: 10px;
   margin: 10px;
   border: 1px solid #000;
+  transition: all 0.3s ease;
+  height: 100%;
+}
+
+.entry-inner:hover {
+  box-shadow: 5px 5px rgb(4, 176, 188);
+}
+
+.entry-inner a {
+  color: #000;
 }
 
 .hide {

@@ -297,7 +297,20 @@ img.black{
     padding: 10px;
     margin: 10px;
     border: 1px solid $black;
+    transition: all .3s ease;
+    height: 100%;
 }
+
+.entry-inner:hover {
+  box-shadow: 5px 5px $aqua;
+}
+
+.entry-inner a{
+  color: $black;
+}
+
+
+
 
 
 @media only screen and (max-width: 600px) {
