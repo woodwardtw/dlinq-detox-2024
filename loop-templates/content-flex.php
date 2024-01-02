@@ -21,7 +21,7 @@
                     <figure>
                         <?php 
                             if($image){
-                               echo wp_get_attachment_image( $image['ID'], 'large', '', array('class'=>'img-fluid aligncenter') ); 
+                               echo wp_get_attachment_image( $image['ID'], 'large', '', array('class'=>'img-fluid aligncenter detox-img') ); 
                                 echo "<figcaption>{$image['caption']}</figcaption>";
                            } else {
                                echo 'Please add a picture.';

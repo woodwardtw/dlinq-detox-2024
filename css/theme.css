@@ -15512,6 +15512,10 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
   margin: 0 20px;
 }
 
+.detox-img {
+  border: 10px solid #000;
+}
+
 #activity-content h1, #activity-content .h1 {
   font-size: calc(100% + 3vw);
   line-height: 1;
