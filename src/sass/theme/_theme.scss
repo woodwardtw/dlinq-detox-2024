@@ -166,7 +166,7 @@ h1, h2, h3, h4 {
   margin: 0 0 15px 0;
 }
 
-#activity-content h2 {
+#activity-content h2, .topic-row h2 {
   font-size:calc(100% + 2.5vw);
   line-height: 1;
   margin: 0 0 15px 0;
@@ -177,7 +177,7 @@ h1, h2, h3, h4 {
     margin: 40px 0 30px 0;
 }
 
-#activity-content p {
+#activity-content p, .topic-row p, .topic-row li {
   font-size: calc(100% + .4vw);
   line-height: 1.4;
 }
