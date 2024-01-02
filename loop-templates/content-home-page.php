@@ -21,7 +21,7 @@ defined( 'ABSPATH' ) || exit;
 			<p>
 				This Detox will be a little different from previous Detoxes. Rather than writing articles on topics related to generative AI, we will be guiding YOU through activities that help you explore and understand these tools. You’ll be encouraged to try the activities, reflect on them, and share what you did with others.
 			</p>
-			<a href="#" class="btn btn-signup">Sign Up</a>
+			<a href="https://signup.e2ma.net/signup/1961828/1809196/" class="btn btn-signup">Sign Up</a>
 			</div>
 		</div>
 		<?php detox_homepage_posts();?>

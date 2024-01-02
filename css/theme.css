@@ -11,7 +11,7 @@
   --bs-purple: #6f42c1;
   --bs-pink: #d63384;
   --bs-red: rgb(214, 9, 5);
-  --bs-orange: #fd7e14;
+  --bs-orange: #f37722;
   --bs-yellow: rgb(247, 220, 10);
   --bs-green: #198754;
   --bs-teal: #20c997;
@@ -11925,16 +11925,16 @@ a.skip-link:not(:focus):not(:focus-within) {
 
 .has-orange-color,
 .has-orange-color:visited {
-  color: #fd7e14;
+  color: #f37722;
 }
 
 .has-orange-background-color {
-  background-color: #fd7e14;
-  border-color: #fd7e14;
+  background-color: #f37722;
+  border-color: #f37722;
 }
 
 .wp-block-button:hover .wp-block-button__link.has-white-background-color.has-orange-color {
-  color: #fd7e14;
+  color: #f37722;
 }
 
 .has-yellow-color,
@@ -15534,6 +15534,14 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
   line-height: 1.4;
 }
 
+.entry {
+  margin-bottom: 50px;
+}
+
+.entry h3, .entry .h3 {
+  margin-top: 20px;
+}
+
 .step {
   margin: 20px 0;
   padding: 30px;
@@ -15613,6 +15621,26 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
 
 #wrapper-footer a:hover {
   background-color: rgb(247, 220, 10);
+}
+
+img.yellow {
+  background-color: rgb(247, 220, 10);
+}
+
+img.aqua {
+  background-color: rgb(4, 176, 188);
+}
+
+img.red {
+  background-color: rgb(214, 9, 5);
+}
+
+img.orange {
+  background-color: #f37722;
+}
+
+img.black {
+  background-color: #000;
 }
 
 .hide {

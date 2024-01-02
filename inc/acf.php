@@ -8,49 +8,7 @@
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
 
-
-//CHALLENGES
-
-//add gravity forms to acf field for the daily create challenge option
-/**
- * Populate ACF select field options with Gravity Forms forms
- */
-
-//might need something like https://wordpress.org/plugins/categories-for-gravity-forms/
-function acf_populate_gf_forms_ids( $field ) {
-	if ( class_exists( 'GFFormsModel' ) ) {
-		$choices = [''];
-
-		foreach ( \GFFormsModel::get_forms() as $form ) {
-			$choices[ $form->id ] = $form->title;
-		}
-
-		$field['choices'] = $choices;
-	}
-
-	return $field;
-}
-add_filter( 'acf/load_field/name=form_id', 'acf_populate_gf_forms_ids' );
-
-
-	// Getting the entries
-	$results = GFAPI::get_entries( $form_id, $search_criteria );
-	$html = '';
-	foreach ($results as $key => $result) {
-		$text = ($result['6'] != '') ? "<div class='response-text'>{$result['6']}</div>" : '';
-		$name = ($result['1.3'] != '' || $result['1.6'] != '') ? "<div class='response-name'>{$result['1.3']} {$result['1.6']}</div>" : '';
-		$year = dlinq_year_cleaner($result['3']);
-		$grad = ($result['3'] != '') ? "<div class='response-year'>'{$year}</div>" : '';
-		//var_dump(dlinq_year_cleaner($result['3']));
-		$img = ($result['8'] != '') ? "<div class='response-img'><img src='{$result['8']}' class='img-fluid' alt='An image created from the prompt.'></div>" : '';
-		$html .= "<div class='response'>{$img} {$text} <div class='responder'>{$name} {$grad}</div></div>";
-	}
-	echo "<div class='response-holder'>
-			<h2 id='responses'>Responses</h2>
-			{$html}
-		</div>";
-}
-
+//display gravity submitted data 
 
 //change title for ACF flexible layout in collapsed mode
 

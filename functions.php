@@ -117,7 +117,7 @@ function acf_populate_gf_forms_ids( $field ) {
 }
 add_filter( 'acf/load_field/name=form_id', 'acf_populate_gf_forms_ids' );
 
-
+//SUBMISSIONS
 function detox_display_submissions($page_id){
 	$cat = 'page-'.$page_id;
 	$args = array(
@@ -131,13 +131,21 @@ function detox_display_submissions($page_id){
 	if ( $the_query->have_posts() ) :
 		echo "<div class='submission-holder'><h2>Submissions</h2><div class='row'>";
 		while ( $the_query->have_posts() ) : $the_query->the_post();
-		global $post;
-		$title = get_the_title();
-		$link = get_the_permalink();
-		$img = get_the_post_thumbnail($post->ID, 'medium');
+			global $post;
+			$title = get_the_title();
+			$link = get_the_permalink();
+			$comment_count = get_comment_count($post->ID)['approved'];
+			if(has_post_thumbnail($post->ID)){
+						$img = get_the_post_thumbnail($post->ID, 'medium');
+			} else {
+				$dir = get_template_directory_uri();
+				$color = detox_rand_color();
+				$img = "<img src='{$dir}/imgs/ai-wave-white.svg' class='attachment-medium size-medium wp-post-image {$color}' width='300' height='300' alt='AI written with a half-tone background.'>";
+			}
 		echo "<div class='entry col-md-4'>
 				{$img}
 				<a href='{$link}'><h3>{$title}</h3></a>
+				<div class='comments'>{$comment_count} comments</div>
 			</div>";
 		endwhile;
 		echo "</div></div>";
@@ -145,4 +153,10 @@ function detox_display_submissions($page_id){
 
 	// Reset Post Data
 	wp_reset_postdata();
+}
+
+
+function detox_rand_color(){
+	$colors = array('aqua','yellow','red','orange','black');
+	return $colors[array_rand($colors)];
 }
