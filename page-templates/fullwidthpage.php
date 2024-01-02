@@ -29,7 +29,7 @@ if ( is_page_template( 'page-templates/no-title.php' ) ) {
 
 		<div class="row">
 
-			<div class="col-md-8 offset-md-2 content-area" id="primary">
+			<div class="col-md-12 content-area" id="primary">
 
 				<main class="site-main" id="main" role="main">
 
