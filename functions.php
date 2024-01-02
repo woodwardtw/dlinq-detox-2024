@@ -135,6 +135,7 @@ function detox_display_submissions($page_id){
 			$title = get_the_title();
 			$link = get_the_permalink();
 			$comment_count = get_comment_count($post->ID)['approved'];
+			$plural = ($comment_count === 1) ? '' : 's';
 			if(has_post_thumbnail($post->ID)){
 						$img = get_the_post_thumbnail($post->ID, 'medium');
 			} else {
@@ -145,7 +146,7 @@ function detox_display_submissions($page_id){
 		echo "<div class='entry col-md-4'>
 				{$img}
 				<a href='{$link}'><h3>{$title}</h3></a>
-				<div class='comments'>{$comment_count} comments</div>
+				<div class='comments'>{$comment_count} comment{$plural}</div>
 			</div>";
 		endwhile;
 		echo "</div></div>";
