@@ -15568,6 +15568,35 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
   border-top: 1px solid #000;
 }
 
+.accordion-button {
+  background-color: rgb(247, 220, 10);
+  transition: all 0.3s ease;
+  border-radius: 0;
+}
+
+.accordion-button:hover {
+  background-color: rgb(4, 176, 188);
+}
+
+.accordion-button {
+  font-size: 1.5rem;
+  margin: auto auto;
+  display: block;
+}
+
+.accordion-button:not(.collapsed) {
+  color: #000;
+  background-color: rgb(247, 220, 10);
+}
+
+.accordion-item {
+  border: none;
+}
+
+.submission-holder {
+  margin-top: 50px;
+}
+
 #submit {
   font-size: 1.3rem;
   background-color: rgb(247, 220, 10);

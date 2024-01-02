@@ -210,6 +210,35 @@ h1, h2, h3, h4 {
   border-top: 1px solid $black;
 }
 
+.accordion-button{
+  background-color: $yellow;
+  transition: all .3s ease;
+  border-radius: 0;
+}
+
+.accordion-button:hover {
+  background-color: $aqua;
+}
+
+.accordion-button {
+  font-size: 1.5rem;
+  margin: auto auto;
+  display: block;
+}
+
+.accordion-button:not(.collapsed){
+  color: $black;
+  background-color: $yellow;
+}
+
+.accordion-item {
+  border: none;
+}
+
+.submission-holder {
+  margin-top: 50px;
+}
+
 #submit {
   font-size: 1.3rem;
   background-color: $yellow;
