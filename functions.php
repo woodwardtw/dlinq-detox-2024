@@ -71,6 +71,7 @@ function detox_homepage_posts(){
 			$post_number = $the_query->current_post;
 			$class = (in_array( $post_number, $make_seven )) ? 'col-md-7' : 'col-md-5' ; // alternate 5 and 7 column width blocks
 			$img_side = ($the_query->current_post % 3 == 0) ? 'order-md-last' : 'order-md-first'; //alter img to go first or last 
+			$link = (in_category('active')) ? "<a class='btn btn-more' href='{$link}' aria-lable='Read more about the AI topic: {$title}.'>Explore</a>" : "<div class='btn btn-more'>Coming soon</div>";
 			$html = "<div class='{$class}'>
 						<div class='row {$bg_color} home-box'>
 							<div class='col-md-5 {$img_side}'>
@@ -79,7 +80,7 @@ function detox_homepage_posts(){
 							<div class='col-md-7'>
 								<h2>{$title}</h2>
 								<p>{$excerpt}</p>
-								<a class='btn btn-more' href='{$link}' aria-lable='Read more about the AI topic: {$title}.'>Explore</a>
+								{$link}
 							</div>
 						
 						</div>
