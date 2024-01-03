@@ -403,6 +403,19 @@ img.black{
   background-color: $aqua;
 }
 
+.poem {
+    margin: 0 0 20px 20px;
+    border-left: 3px solid $aqua;
+    padding-left: 20px;
+}
+
+.author {
+    background: $yellow;
+    padding: 20px;
+    font-size: calc(100% + .4vw);
+    margin-top: 15px;
+}
+
 @media only screen and (max-width: 600px) {
     .home-box{
       margin: 0 0;
