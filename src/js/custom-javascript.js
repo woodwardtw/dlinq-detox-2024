@@ -7,7 +7,7 @@ jQuery(document).ready(function() {
   if(window.location.hash == '#submission') {
     jQuery('#submission').modal('show');
   }
-  //does it for anchor link to #submission
+  //does it for anchor link to #submission as well
    window.addEventListener('hashchange', function() { 
         if(window.location.hash == '#submission') {
             jQuery('#submission').modal('show');

@@ -126,13 +126,12 @@
                                 "id": ""
                             },
                             "choices": {
-                                "green": "Green",
                                 "yellow": "Yellow",
                                 "black": "Black",
                                 "white": "White",
                                 "gray": "Gray",
-                                "blue": "Blue",
-                                "light-blue": "Light blue"
+                                "aqua": "Aqua",
+                                "red": "Red"
                             },
                             "default_value": "white",
                             "return_format": "value",
@@ -207,13 +206,12 @@
                                 "id": ""
                             },
                             "choices": {
-                                "green": "Green",
                                 "yellow": "Yellow",
                                 "black": "Black",
                                 "white": "White",
                                 "gray": "Gray",
-                                "blue": "Blue",
-                                "light-blue": "Light blue"
+                                "aqua": "Aqua",
+                                "red": "Red"
                             },
                             "default_value": "white",
                             "return_format": "value",
@@ -523,7 +521,11 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "choices": [],
+                            "choices": [
+                                "",
+                                "Base Challenge Form",
+                                "test"
+                            ],
                             "default_value": false,
                             "return_format": "value",
                             "multiple": 0,
@@ -567,5 +569,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1703102090
+    "modified": 1704312436
 }
