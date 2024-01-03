@@ -184,20 +184,22 @@
                     <?php endif;?>
                     <?php if ($form > 0) {
                         $form_display = gravity_form($form, false, false, false, null, false, null, false, null, null);
-                        echo "<div class='accordion accordion-flush' id='accordionSubmission'>
-                                <div class='accordion-item'>
-                                    <h2 class='accordion-header' id='submit'>
-                                    <button class='accordion-button collapsed' id='subButton' type='button' data-bs-toggle='collapse' data-bs-target='#submitForm' aria-expanded='false' aria-controls='collapseOne'>
-                                        Submit your activity
-                                    </button>
-                                    </h2>
-                                    <div id='submitForm' class='accordion-collapse collapse' aria-labelledby='headingOne' data-bs-parent='#accordionSubmission'>
-                                    <div class='accordion-body'>
-                                    {$form_display}
+                        echo "
+                        <button type='button' class='btn btn-more' data-bs-toggle='modal' data-bs-target='#submission'>
+                           Submit content
+                            </button>
+                        <div class='modal modal-lg fade' id='submission' tabindex='-1'>
+                                <div class='modal-dialog'>
+                                    <div class='modal-content'>
+                                    <div class='modal-header'>
+                                        <button type='button' class='btn-close' data-bs-dismiss='modal' aria-label='Close'></button>
                                     </div>
+                                    <div class='modal-body'>
+                                        {$form_display}
+                                    </div>                                  
                                     </div>
                                 </div>
-                            </div>";
+                                </div>";
                         detox_display_submissions($post->ID);
                         }?>
                 </div>
