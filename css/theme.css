@@ -15758,6 +15758,7 @@ img.black {
   margin: 0 0 20px 20px;
   border-left: 3px solid rgb(4, 176, 188);
   padding-left: 20px;
+  font-style: italic;
 }
 
 .author {
