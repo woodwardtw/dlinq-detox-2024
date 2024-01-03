@@ -15700,6 +15700,10 @@ img.black {
   color: #fff;
 }
 
+.topic-row.red a {
+  color: #000;
+}
+
 .topic-row.orange {
   background-color: #f37722;
 }
