@@ -336,7 +336,11 @@ img.black{
 }
 
 .topic-row.aqua {
-    background-color: $aqua;
+    background-color: $aqua;    
+}
+
+.topic-row.aqua a{
+  color: $black;
 }
 
 .topic-row.red {
@@ -351,6 +355,11 @@ img.black{
 .topic-row.black{
       background-color: $black;
       color: $white;
+}
+
+.full-width-row img.alignleft {
+  margin: 0 20px 20px 0;
+  border: 10px solid $black; 
 }
 
 /*COMMENTS*/

@@ -15691,6 +15691,10 @@ img.black {
   background-color: rgb(4, 176, 188);
 }
 
+.topic-row.aqua a {
+  color: #000;
+}
+
 .topic-row.red {
   background-color: rgb(214, 9, 5);
   color: #fff;
@@ -15703,6 +15707,11 @@ img.black {
 .topic-row.black {
   background-color: #000;
   color: #fff;
+}
+
+.full-width-row img.alignleft {
+  margin: 0 20px 20px 0;
+  border: 10px solid #000;
 }
 
 /*COMMENTS*/
