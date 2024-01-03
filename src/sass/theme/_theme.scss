@@ -356,7 +356,17 @@ img.black{
 }
 
 @media only screen and (max-width: 600px) {
-    
+    .active-img {
+      margin: 30px 0;
+    }
+
+    .activity-block{
+      padding: 20px;
+    }
+
+    .step {
+      padding: 10px;
+    }
 
 }
 
