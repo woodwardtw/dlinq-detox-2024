@@ -185,7 +185,7 @@
                     <?php if ($form > 0) {
                         $form_display = gravity_form($form, false, false, false, null, false, null, false, null, null);
                         echo "
-                        <button type='button' class='btn btn-more' data-bs-toggle='modal' data-bs-target='#submission'>
+                        <button type='button' class='btn btn-more' id='sub-btn' data-bs-toggle='modal' data-bs-target='#submission'>
                            Submit content
                             </button>
                         <div class='modal modal-lg fade' id='submission' tabindex='-1'>

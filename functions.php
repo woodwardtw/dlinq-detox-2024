@@ -193,3 +193,26 @@ function configure_tinymce($in) {
   }";
   return $in;
 }
+
+
+//add editor to comments
+add_filter( 'comment_form_defaults', 'rich_text_comment_form' );
+function rich_text_comment_form( $args ) {
+	ob_start();
+	wp_editor( '', 'comment', array(
+		'media_buttons' => false, // show insert/upload button(s) to users with permission
+		'textarea_rows' => '10', // re-size text area
+		'dfw' => false, // replace the default full screen with DFW (WordPress 3.4+)
+		'tinymce' => array(
+        	'theme_advanced_buttons1' => 'bold,italic,underline,strikethrough,bullist,numlist,code,blockquote,link,unlink,outdent,indent,|,undo,redo',
+	        'theme_advanced_buttons2' => '', // 2nd row, if needed
+        	'theme_advanced_buttons3' => '', // 3rd row, if needed
+        	'theme_advanced_buttons4' => '' // 4th row, if needed
+  	  	),
+		'quicktags' => array(
+ 	       'buttons' => 'strong,em,link,block,del,ins,img,ul,ol,li,code,close'
+	    )
+	) );
+	$args['comment_field'] = ob_get_clean();
+	return $args;
+}
