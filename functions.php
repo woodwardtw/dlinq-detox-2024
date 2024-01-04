@@ -196,7 +196,7 @@ function configure_tinymce($in) {
 
 
 //add editor to comments
-add_filter( 'comment_form_defaults', 'rich_text_comment_form' );
+//add_filter( 'comment_form_defaults', 'rich_text_comment_form' );
 function rich_text_comment_form( $args ) {
 	ob_start();
 	wp_editor( '', 'comment', array(
