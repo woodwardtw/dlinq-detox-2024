@@ -180,7 +180,7 @@ add_filter('tiny_mce_before_init','configure_tinymce');
  */
 function configure_tinymce($in) {
   $in['paste_preprocess'] = "function(plugin, args){
-    var whitelist = 'p,b,strong,i,em,h2,h3,h4,h5,h6,ul,li,ol,a,href,blockquote,table,td,tr,th';  // Strip all HTML tags except those we have whitelisted here
+    var whitelist = 'p,b,strong,i,em,h2,h3,h4,h5,h6,ul,li,ol,a,href,blockquote,table,td,tr,th,div,br';  // Strip all HTML tags except those we have whitelisted here
     var stripped = jQuery('<div>' + args.content + '</div>');
     var els = stripped.find('*').not(whitelist);
     for (var i = els.length - 1; i >= 0; i--) {

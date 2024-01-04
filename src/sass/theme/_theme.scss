@@ -115,11 +115,32 @@ h1, h2, h3, h4 {
   max-width: 300px;
 }
 
-.btn-more {
+.nav-previous, .nav-next{
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
+  color: $black;
+  padding: 5px 30px;
+  box-shadow: 5px 5px;
+  transition: all 0.5s ease-out;
+  cursor: pointer;
+  margin: 10px 0;
+  display: block;
+  max-width: 300px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.nav-previous a, .nav-next a{
+  color: $black;
+  text-decoration: none;
+}
+
+.btn-more, .nav-previous, .nav-next {
   background-color: $yellow;
 }
 
-.btn-more:hover {
+.btn-more:hover, .nav-previous:hover, .nav-next:hover {
     background-color: $yellow;
     box-shadow: -5px 5px $red;
 }
@@ -416,10 +437,10 @@ img.black{
 }
 
 .author {
-    background: $yellow;
     padding: 20px;
     font-size: calc(100% + .4vw);
-    margin-top: 15px;
+    margin: 45px 0 45px 0;
+    border-top: 3px dashed $aqua;
 }
 
 blockquote {
