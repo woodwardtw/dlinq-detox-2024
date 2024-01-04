@@ -482,6 +482,10 @@ ol.wp-block-latest-comments {
   margin-bottom: 5px;
 }
 
+.comment-content a {
+  text-decoration: underline;
+}
+
 @media only screen and (max-width: 600px) {
     .home-box{
       margin: 0 0;
