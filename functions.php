@@ -124,6 +124,7 @@ function detox_display_submissions($page_id){
 	$args = array(
 		'post_type' 	=> array('post'),
 		'post_status'	=> array('publish'),
+		'posts_per_page' => -1,
 		 'category_name' => $cat
 	);
 	$the_query = new WP_Query( $args );
