@@ -15399,6 +15399,24 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
   color: #fff;
   text-decoration: none;
   font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
+}
+
+.navbar-expand-md .navbar-nav .nav-link {
+  background-color: rgb(247, 220, 10);
+  color: #000;
+  padding: 3px 5px;
+  margin: 10px 5px;
+  min-width: 150px;
+  text-align: center;
+  font-weight: 700;
+  box-shadow: 3px 3px #000;
+  transition: all 0.3s ease;
+  border-radius: 3px;
+}
+
+.navbar-expand-md .navbar-nav .nav-link:hover {
+  box-shadow: -3px 3px #000;
 }
 
 .home-box {
@@ -15834,6 +15852,11 @@ ol.wp-block-latest-comments {
 
 .comment-content a {
   text-decoration: underline;
+}
+
+#wrapper-footer-full {
+  background-color: #fff;
+  padding: 0;
 }
 
 @media only screen and (max-width: 600px) {

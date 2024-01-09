@@ -13,7 +13,6 @@ defined( 'ABSPATH' ) || exit;
 $container = get_theme_mod( 'understrap_container_type' );
 ?>
 
-<?php get_template_part( 'sidebar-templates/sidebar', 'footerfull' ); ?>
 
 <div class="wrapper halftone" id="wrapper-footer">
 
@@ -26,8 +25,10 @@ $container = get_theme_mod( 'understrap_container_type' );
 				<footer class="site-footer" id="colophon">
 
 					<div class="site-info">
-						A <a href="https://dlinq.middcreate.net">Digital Learning and Inquiry</a> experience brought to you by <a href="https://middlebury.edu">Middlebury College</a>
-						<?php //understrap_site_info(); ?>
+										
+						<?php
+							get_template_part( 'sidebar-templates/sidebar', 'footerfull' );
+						?>
 
 					</div><!-- .site-info -->
 
