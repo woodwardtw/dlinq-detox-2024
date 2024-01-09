@@ -509,15 +509,15 @@
                         },
                         {
                             "key": "field_65834679e0b62",
-                            "label": "Form ID",
+                            "label": "Gravity Form",
                             "name": "form_id",
                             "aria-label": "",
                             "type": "select",
-                            "instructions": "",
+                            "instructions": "This form will be used to create the content associated with this activity. Make the form first.",
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
-                                "width": "",
+                                "width": "50",
                                 "class": "",
                                 "id": ""
                             },
@@ -533,6 +533,31 @@
                             "ui": 0,
                             "ajax": 0,
                             "placeholder": ""
+                        },
+                        {
+                            "key": "field_659d57ef782dd",
+                            "label": "Challenge Category",
+                            "name": "challenge_category",
+                            "aria-label": "",
+                            "type": "taxonomy",
+                            "instructions": "This will be the category that makes the posts show up on this page.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "taxonomy": "category",
+                            "add_term": 1,
+                            "save_terms": 0,
+                            "load_terms": 0,
+                            "return_format": "object",
+                            "field_type": "select",
+                            "allow_null": 1,
+                            "bidirectional": 0,
+                            "multiple": 0,
+                            "bidirectional_target": []
                         }
                     ],
                     "min": "",
@@ -569,5 +594,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1704312436
+    "modified": 1704810795
 }

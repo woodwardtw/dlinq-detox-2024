@@ -168,6 +168,15 @@ function detox_rand_color(){
 	return $colors[array_rand($colors)];
 }
 
+function dlinq_detox_signup(){
+	global $post;
+	$post_id = $post->ID;
+	$title = get_field('sign_up_title');
+	$content = get_field('sign_up_content');
+	echo "<h2>{$title}</h2>";
+	echo $content;
+}
+
 
 //fix cut paste drama from https://jonathannicol.com/blog/2015/02/19/clean-pasted-text-in-wordpress/
 add_filter('tiny_mce_before_init','configure_tinymce');

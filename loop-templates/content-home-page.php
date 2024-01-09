@@ -16,12 +16,9 @@ defined( 'ABSPATH' ) || exit;
 			
 			<div class="col-md-5 home-box yellow">
 			<div class="internal-left-block">
-			<h2>AI everywhere?</h2>
-			<p>Get past the hype and get hands on with generative AI in the 2024 DLINQ Digital Detox.</p>
-			<p>
-				This Detox will be a little different from previous Detoxes. Rather than writing articles on topics related to generative AI, we will be guiding YOU through activities that help you explore and understand these tools. You’ll be encouraged to try the activities, reflect on them, and share what you did with others.
-			</p>
-			<a href="https://signup.e2ma.net/signup/1961828/1809196/" class="btn btn-signup">Sign Up</a>
+				<?php 
+					dlinq_detox_signup();
+				?>			
 			</div>
 		</div>
 		<?php detox_homepage_posts();?>
