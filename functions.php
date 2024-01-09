@@ -120,7 +120,15 @@ add_filter( 'acf/load_field/name=form_id', 'acf_populate_gf_forms_ids' );
 
 //SUBMISSIONS
 function detox_display_submissions($page_id){
-	$cat = 'page-'.$page_id;
+	if( get_row_layout() == 'challenge' ){
+			if (get_sub_field('challenge_category', $page_id)){
+				$cat = get_sub_field('challenge_category', $page_id)->name;
+				//var_dump($cat->name);
+			} else{
+				$cat = 'page-'.$page_id;	
+			}
+		}
+
 	$args = array(
 		'post_type' 	=> array('post'),
 		'post_status'	=> array('publish'),
