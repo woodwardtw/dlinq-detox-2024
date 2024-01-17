@@ -64,7 +64,7 @@ function detox_homepage_posts(){
 			$link = get_the_permalink();
 			$img = get_the_post_thumbnail($post->ID,'medium', array('class' => 'img-fluid'));
 			$content = get_the_content();
-			$excerpt = substr($content, 0, 400) . ' . . .';
+			$excerpt = substr($content, 0, 300) . ' . . .';
 			$bg_colors = array('white', 'white', 'aqua', 'red', 'white', 'white');
 			$bg_color = $bg_colors[$the_query->current_post]; //change background color according to array
 			$make_seven = array(0, 1, 4, 5, 7 );
