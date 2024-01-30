@@ -60,7 +60,8 @@
             $right_title = get_sub_field('right_title');
             $left_content = get_sub_field('left_side');
             $right_content = get_sub_field('right_side');
-            $slug = sanitize_title($title);
+            $left_slug = sanitize_title($left_title);
+            $right_slug = sanitize_title($right_title);
         ?>
             <div class='row topic-row full-width-row side-by-side-row d-flex align-items-center'>
                 <div class='col-md-6'>
