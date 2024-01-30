@@ -487,6 +487,25 @@ blockquote::before{
   top:-20px;
 }
 
+.big-quote {
+    margin: 20px 30px;
+    padding: 63px;
+    font-style: italic;
+    border-left: none;
+    position: relative;
+    font-size: 2rem;
+    background-color: $yellow;
+}
+
+#activity-content .big-quote p {
+    line-height: 1.2;
+}
+
+.big-quote footer {
+  margin-top: 2rem;
+  font-size: 1rem;
+}
+
 /*right sidebar*/
 #right-sidebar {
   padding-left: 40px;
