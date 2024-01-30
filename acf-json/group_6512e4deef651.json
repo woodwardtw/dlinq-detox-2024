@@ -225,6 +225,56 @@
                     "min": "",
                     "max": ""
                 },
+                "layout_65b91770c6d5b": {
+                    "key": "layout_65b91770c6d5b",
+                    "name": "side_by_side",
+                    "label": "Side by side",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_65b9177dc6d5d",
+                            "label": "Left Side",
+                            "name": "left_side",
+                            "aria-label": "",
+                            "type": "wysiwyg",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "tabs": "all",
+                            "toolbar": "full",
+                            "media_upload": 1,
+                            "delay": 0
+                        },
+                        {
+                            "key": "field_65b9178fc6d5e",
+                            "label": "Right Side",
+                            "name": "right_side",
+                            "aria-label": "",
+                            "type": "wysiwyg",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "tabs": "all",
+                            "toolbar": "full",
+                            "media_upload": 1,
+                            "delay": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
                 "layout_65144b15f0719": {
                     "key": "layout_65144b15f0719",
                     "name": "big_quote",
@@ -594,5 +644,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1704810795
+    "modified": 1706629048
 }

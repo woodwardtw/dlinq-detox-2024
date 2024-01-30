@@ -513,6 +513,19 @@ ol.wp-block-latest-comments {
   padding: 0;
 }
 
+.side-by-side-row.topic-row{
+  padding-left: 6vw;
+  padding-right: 6vw;
+}
+
+.side-by-side-row .col-md-6:nth-of-type(odd){
+  padding-right: 6vw;
+}
+
+.side-by-side-row .col-md-6:nth-of-type(even){
+  padding-left: 6vw;
+}
+
 /*AI Conversation formatting*/
 
 .bot {

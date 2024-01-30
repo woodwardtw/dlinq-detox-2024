@@ -54,6 +54,29 @@
                 </div>
             </div>
         <?php endif;?>
+        <!--side by side loop-->
+         <?php if( get_row_layout() == 'side_by_side' ): 
+            $left_title = get_sub_field('left_title');
+            $right_title = get_sub_field('right_title');
+            $left_content = get_sub_field('left_side');
+            $right_content = get_sub_field('right_side');
+            $slug = sanitize_title($title);
+        ?>
+            <div class='row topic-row full-width-row side-by-side-row d-flex align-items-center'>
+                <div class='col-md-6'>
+                    <?php if($left_title):?>
+                        <h2 id="<?php echo $slug?>"><?php echo $left_title;?></h2>
+                    <?php endif;?>
+                    <?php echo $left_content;?>
+                </div>
+                <div class='col-md-6'>
+                    <?php if($right_title):?>
+                        <h2 id="<?php echo $slug?>"><?php echo $right_title;?></h2>
+                    <?php endif;?>
+                    <?php echo $right_content;?>
+                </div>
+            </div>
+        <?php endif;?>
            <!--activity steps loop-->
          <?php if( get_row_layout() == 'steps' ): 
             $title = get_sub_field('activity_title');
