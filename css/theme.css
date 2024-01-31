@@ -15934,6 +15934,7 @@ ol.wp-block-latest-comments {
   background-color: rgb(4, 176, 188);
   height: 20px;
   border-right: 1px solid;
+  position: relative;
 }
 
 .chart .bar:after {
