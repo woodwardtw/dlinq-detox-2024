@@ -15924,14 +15924,14 @@ ol.wp-block-latest-comments {
 
 .chart .outer-bar {
   width: 100%;
-  background-color: rgb(243, 217, 184);
+  background-color: rgb(247, 220, 10);
   border: 1px solid;
 }
 
 .chart .bar {
   display: block;
   width: 100%;
-  background-color: rgb(247, 220, 10);
+  background-color: rgb(4, 176, 188);
   height: 20px;
   border-right: 1px solid;
 }
