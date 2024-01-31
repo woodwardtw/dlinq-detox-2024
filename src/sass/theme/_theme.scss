@@ -561,6 +561,43 @@ ol.wp-block-latest-comments {
   max-width: 800px;
 }
 
+/*chart display*/
+.chart {
+  max-width: 900px;
+  margin: 30px auto;
+}
+
+.chart .rating {
+  padding-left: 20px;
+  margin: 20px;
+}
+
+.chart .outer-bar {
+  width: 100%;
+  background-color: $cream;
+  border: 1px solid;
+}
+
+.chart .bar {
+  display: block;
+  width: 100%;
+  background-color: $yellow;
+  height: 20px;
+  border-right: 1px solid;
+}
+
+.chart .bar:after {
+  content: '';
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  right: -10px;
+  top: -20px;
+  background-color: $red;
+      background: linear-gradient(to bottom right, #fff 0%, #fff 50%, $red 50%, $red 100%);
+  transform: rotate(45deg);
+}
+
 @media only screen and (max-width: 600px) {
     .home-box{
       margin: 0 0;
